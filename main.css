@@ -1,0 +1,49 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    margin: 80px auto;
+    max-width: 640px;
+    width: 100%;
+}
+
+form{
+    margin-top: 40px;
+}
+
+input, button{
+    display: block;
+    padding: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+    resize: none;
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+button{
+    background-color: rgb(146, 145, 145);
+    color: rgb(212, 212, 212);
+    font-family:Times;
+    font-size: 18px;
+}
+
+button:hover{
+    background-color: rgb(112, 112, 112);
+    border: 2px solid black;
+}
+
+.msg-sucess{
+    width: 100%;
+    padding: 6px;
+    color: rgb(243, 243, 243);
+    font-style: oblique;
+    font-size: 14px;
+    justify-content: center;
+    display: none;
+    border-radius: 50px;
+}
