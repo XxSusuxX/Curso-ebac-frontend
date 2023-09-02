@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dancing Script', cursive;
+}
+
+body{
+    background: #6C7A89;
+}
+
+header{
+    background-color: #505b66;
+    padding: 16px 0;
+    color: white;
+    display: flex;
+    border-bottom: 10px solid #3b434b;
+    border-radius: 0 0 10px 10px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
+    font-family: sans-serif;
+}
+
+form{
+    color: aliceblue;
+    padding: 24px 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+input, button{
+    padding: 8px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+button{
+    text-transform: uppercase;
+    border: none;
+    background-color: #505b66;
+    cursor: pointer;
+    color: aliceblue;
+}
+button:hover{
+    background-color: #3b434b;
+    outline: 1px solid #3b434b;
+}
+
+.tarefas{
+    margin-top: 18px;
+    cursor: pointer;
+}
