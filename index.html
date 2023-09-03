@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<section>
+    <div class="container">
+        <h1>Entre em contato</h1>
+        <form>
+                <div class="form-campo">
+                    <label for="nome">Nome:</label>
+                    <input name="nome" type="text" id="nome" placeholder="Digite seu Nome">
+                </div>
+                <div class="form-campo">
+                    <label for="email">E-mail:</label>
+                    <input name="email" type="text" id="email" placeholder="Digite seu E-mail">
+                </div>
+                <div class="form-campo">
+                    <label for="telefone">Telefone:</label>
+                    <input name="telefone" type="tel" id="telefone" placeholder="Digite seu Telefone">
+                </div>
+                <div class="form-campo">
+                    <label for="cpf">CPF:</label>
+                    <input name="cpf" type="text" id="cpf" placeholder="Digite seu CPF">
+                </div>
+                <div class="form-campo">
+                    <label for="endereco">Endereço:</label>
+                    <input name="endereco" type="text" id="endereco" placeholder="Digite sua Rua, Número e Bairro">
+                </div>
+                <div class="form-campo">
+                    <label for="cep">CEP:</label>
+                    <input name="cep" type="text" id="cep" placeholder="Digite seu CEP">
+                </div>
+                <button type="submit">Enviar</button>
+        </form>
+    </div>
+</section>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="./js/jquery.mask.min.js"></script>
+<script src="./js/jquery.validate.min.js"></script>
+<script src="./js/messages_pt_BR.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#telefone').mask('(00) 00000-0000')
+        $('#cpf').mask('000.000.000-00')
+        $('#cep').mask('00000-000')
+
+        $('form').validate({
+            rules:{
+                nome:{
+                  required: true  
+                },
+                email:{
+                    required: true
+                },
+                telefone:{
+                    required: true
+                },
+                cpf:{
+                    required: true
+                },
+                endereco:{
+                    required: true
+                },
+                cep:{
+                    required: true
+                },
+            },
+            messages:{
+                nome:'Por favor, insira seu nome',
+                email:'Por favor, insira seu E-mail',
+                telefone:'Por favor, insira seu Telefone',
+                cpf:'Por favor, insira seu CPF',
+                endereco:'Por favor, insira seu Endereço',
+                cep:'Por favor, insira seu CEP'
+            },
+            submitHandler:function(form){
+                alert("enviado")
+            }
+        })
+    })
+</script>
+</html>
