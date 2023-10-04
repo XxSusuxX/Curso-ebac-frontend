@@ -4,7 +4,7 @@ module.exports = function(grunt){
         less:{
             development:{
                 files:{
-                    'main.css': 'main.less'
+                    './styles/main.css': './styles/main.less'
                 }
             },
             production:{
@@ -12,14 +12,14 @@ module.exports = function(grunt){
                     compress: true,
                 },
                 files:{
-                    'main.min.css': 'main.less'
+                    './styles/main.min.css': './styles/main.less'
                 }
             },
         },
         uglify:{
             target:{
                 files:{
-                    'main.min.js':'main.js'
+                    './scripts/main.min.js':'./scripts/main.js'
                 }
             }
         }
